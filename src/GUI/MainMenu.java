@@ -19,6 +19,13 @@ public class MainMenu {
 
             }
         });
+
+        User.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public void displayMainMenu(){
