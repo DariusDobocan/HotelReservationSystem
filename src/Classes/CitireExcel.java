@@ -11,16 +11,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Iterator;
 
-public class CitireUser {
+public class CitireExcel {
 
-    public String ReadCellData(int vRow, int vColumn)
+    public String ReadCellData(int vRow, int vColumn, String xlsx)
     {
         String value=null;          //variable for storing the cell value
         Workbook wb=null;           //initialize Workbook null
         try
         {
 //reading data from a file in the form of bytes
-            FileInputStream fis=new FileInputStream("src/User.xlsx");
+            FileInputStream fis=new FileInputStream(xlsx);
 //constructs an XSSFWorkbook object, by buffering the whole stream into the memory
             wb=new XSSFWorkbook(fis);
         }
@@ -40,6 +40,7 @@ public class CitireUser {
     }
 
 }
+
 
 
 
