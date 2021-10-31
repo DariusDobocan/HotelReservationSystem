@@ -35,4 +35,7 @@ public class User extends Person{
                 "\nE-mail: "+_email;
         return s;
     }
+    public static String fisU(){
+        return "src/User.xlsx";
+    }
 }
