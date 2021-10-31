@@ -35,7 +35,7 @@ public class Room {
                 '}';
     }
 
-    public static String fisU(){
-        return "src/User.xlsx";
+    public static String fisR(){
+        return "src/Room.xlsx";
     }
 }
