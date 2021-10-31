@@ -8,31 +8,40 @@ public class MainMenu {
     private JButton Admin;
     private JButton User;
     private JPanel MainPanel;
-    private JFrame MainMenu;
+    private final JFrame mainMenu;
 
-    public MainMenu(){
-        this.MainMenu = new JFrame("Main Menu");
+    private final AdminLogin adminLogin;
+    private final UserLogin userLogin;
+
+    public MainMenu() {
+        this.mainMenu = new JFrame("Main Menu");
+        this.adminLogin = new AdminLogin(this);
+        this.userLogin = new UserLogin(this);
 
         Admin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                adminLogin.displayAdminLogin();
+                mainMenu.setVisible(false);
             }
         });
 
         User.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                userLogin.displayUserMenu();
+                mainMenu.setVisible(false);
             }
         });
     }
 
-    public void displayMainMenu(){
-        MainMenu.setContentPane(this.MainPanel);
-        MainMenu.setSize(1920, 1080);
-        MainMenu.setVisible(true);
+    public void displayMainMenu() {
+        mainMenu.setContentPane(this.MainPanel);
+        mainMenu.setSize(1920, 1080);
+        mainMenu.setVisible(true);
     }
 
-    public JPanel getMainPanel(){return MainPanel;}
+    public JPanel getMainPanel() {
+        return MainPanel;
+    }
 }

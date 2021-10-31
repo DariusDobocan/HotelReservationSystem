@@ -11,7 +11,7 @@ public class UserLogin {
     private JButton Logare;
     private JFrame UserMenu;
 
-    public UserLogin(){
+    public UserLogin(MainMenu mainMenu) {
         Logare.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -20,11 +20,13 @@ public class UserLogin {
         });
     }
 
-    public void displayUserMenu(){
+    public void displayUserMenu() {
         UserMenu.setContentPane(this.SecondPanel);
         UserMenu.setSize(1920, 1080);
         UserMenu.setVisible(true);
     }
 
-    public JPanel getMainPanel(){return SecondPanel;}
+    public JPanel getMainPanel() {
+        return SecondPanel;
+    }
 }
