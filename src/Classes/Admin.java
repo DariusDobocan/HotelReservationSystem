@@ -6,11 +6,8 @@ public class Admin {
     private int _roomsNumber;
 
     private Admin(){
-
     }
-    private Admin(String camp){
-
-    }
+    
     public static Admin getInstance(){
         if(null==_instance){
             _instance = new Admin();
