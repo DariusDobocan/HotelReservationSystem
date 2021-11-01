@@ -1,9 +1,10 @@
 package GUI;
 
-import Classes.User;
 import Classes.Person;
+import Classes.User;
 
 import javax.swing.*;
+import java.awt.desktop.SystemSleepEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -28,14 +29,12 @@ public class AdminLogin {
         Logare.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                char[] input = Password.getPassword();
-                for(int i = 2;i<=15;++i){
-                    if(input.toString().equals("Admin") && Text.getName().equals(_user[i].get_firstName()));
-                    {
-                        adminCamere.displayadminCamere();
-                        AdminLoginMenu.setVisible(false);
-                    }
-                }
+
+                String S = Text.getName();
+                System.out.println(S);
+                
+                adminCamere.displayadminCamere();
+                AdminLoginMenu.setVisible(false);
             }
         });
 
