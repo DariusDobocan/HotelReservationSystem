@@ -5,11 +5,16 @@ public class Room {
     public String _size;
     private String _idUser, _idAngajat;
 
-    public Room(int _nrCam, int _nrPat, int _nrPers, int _pret, String _size, String _idUser, String _idAngajat) {
+    public Room(int _nrCam, int _nrPat, int _nrPers, int _pret, String _size, String _idUser, String _idAngajat) throws InvalidPriceException{
         this._nrCam = _nrCam;
         this._nrPat = _nrPat;
         this._nrPers = _nrPers;
-        this._pret = _pret;
+        if(_pret>=0) {
+            this._pret = _pret;
+        }
+        else{
+            throw new InvalidPriceException("Pretul introdus este negativ.");
+        }
         this._size = _size;
         this._idUser = _idUser;
         this._idAngajat = _idAngajat;
@@ -38,7 +43,7 @@ public class Room {
     public void evacuareUser(){
         _idUser = "empty";
     }
-    
+
     public static String fisR() {
         return "src/Room.xlsx";
     }
