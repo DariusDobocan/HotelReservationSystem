@@ -7,6 +7,8 @@ public class Main {
         Person[] _user = new User[100];
         Room[] _room = new Room[16];
         CitireExcel x = new CitireExcel();
+        Sortare y = new Sortare();
+        ScriereExcel z = new ScriereExcel();
         int nrCam, nrPat, nrPers, pret;
         String firstName, lastName, id, phoneNumber, email,idUser, idAngajat,size;
         for(int i=1;i<=3;++i) {
@@ -18,6 +20,7 @@ public class Main {
                 _user[i] = new User(firstName, lastName, id, phoneNumber, email);
 
         }
+
         for(int i=1;i<=15;++i) {
             nrCam = x.ReadCellDataInt(i, 0, Room.fisR());
             nrPat = x.ReadCellDataInt(i, 1, Room.fisR());
@@ -28,7 +31,9 @@ public class Main {
             idUser = x.ReadCellData(i, 6, Room.fisR());
             _room[i] = new Room(nrCam,nrPat,nrPers,pret,size,idUser,idAngajat);
         }
-        System.out.println(_room[7].toString());
+
+
+        z.WriteCellData(1,6,Room.fisR(),"yes");
     }
 
 }

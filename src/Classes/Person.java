@@ -42,4 +42,9 @@ public class Person {
                 "\nID: "+ _id;
         return s;
     }
+
+    public static String fisU() {
+        return "src/User.xlsx";
+    }
+
 }
