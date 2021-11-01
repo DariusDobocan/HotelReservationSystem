@@ -7,9 +7,14 @@ public class User extends Person{
     public User(){
         super();
     }
-    public User(String firstName,String lastName,String id,String phoneNumber,String email){
+    public User(String firstName,String lastName,String id,String phoneNumber,String email) throws InvalidPhoneNumberException{
         super(firstName, lastName, id);
-        _phoneNumber = phoneNumber;
+        if(phoneNumber.length()==10) {
+            _phoneNumber = phoneNumber;
+        }
+        else{
+            throw new InvalidPhoneNumberException("Numarul de telefon introdus are mai putin de 10 cifre.");
+        }
         _email = email;
     }
 
