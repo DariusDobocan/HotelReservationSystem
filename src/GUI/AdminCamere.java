@@ -20,11 +20,14 @@ public class AdminCamere {
     private JButton camera11Button;
     private JButton camera14Button;
     private JButton camera15Button;
+    private JPanel adminCamere;
+    private JFrame adminCameref;
 
     private AdminLogin adminLogin;
     private MainMenu mainMenu;
 
     public AdminCamere(AdminLogin adminLogin, MainMenu mainMenu) {
+        this.adminCameref = new JFrame("Camere admin");
         this.mainMenu = mainMenu;
         this.adminLogin = adminLogin;
 
@@ -134,4 +137,13 @@ public class AdminCamere {
         });
 
     }
+
+    public void displayadminCamere(){
+        adminCameref.setContentPane(this.adminCamere);
+        adminCameref.setSize(1920,1080);
+        adminCameref.setVisible(true);
+        adminCameref.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public JPanel getAdminCamere(){return adminCamere;}
 }

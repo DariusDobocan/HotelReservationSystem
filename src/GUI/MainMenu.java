@@ -39,6 +39,7 @@ public class MainMenu {
         mainMenu.setContentPane(this.MainPanel);
         mainMenu.setSize(1920, 1080);
         mainMenu.setVisible(true);
+        mainMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public JPanel getMainPanel() {
