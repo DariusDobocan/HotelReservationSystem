@@ -4,7 +4,6 @@ import Classes.Person;
 import Classes.User;
 
 import javax.swing.*;
-import java.awt.desktop.SystemSleepEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,25 +15,25 @@ public class AdminLogin {
     private JButton Mainmenubutton;
     private JFrame AdminLoginMenu;
 
-    private MainMenu mainMenu;
+    private MainMenu mainMenuf;
     private AdminCamere adminCamere;
 
     public AdminLogin(MainMenu mainMenu) {
-        Person[] _user = new User[50];
-
         this.AdminLoginMenu = new JFrame("AdminLogin");
-        this.mainMenu = mainMenu;
-        this.adminCamere = new AdminCamere(this, this.mainMenu);
+        this.mainMenuf = mainMenu;
+        this.adminCamere = new AdminCamere(this, this.mainMenuf);
 
         Logare.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String text = Text.getText();
+                String s = new String(Password.getPassword());
+                s.valueOf(Password.getPassword());
+                if (text.equals("Admin") && s.equals("ParolaAdmin")) {
 
-                String S = Text.getName();
-                System.out.println(S);
-                
-                adminCamere.displayadminCamere();
-                AdminLoginMenu.setVisible(false);
+                    adminCamere.displayadminCamere();
+                    AdminLoginMenu.setVisible(false);
+                }
             }
         });
 
