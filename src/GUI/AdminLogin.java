@@ -1,6 +1,8 @@
 package GUI;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AdminLogin {
     private JTextField Text;
@@ -17,6 +19,17 @@ public class AdminLogin {
         this.AdminLoginMenu = new JFrame("AdminLogin");
         this.mainMenu = mainMenu;
         this.adminCamere = new AdminCamere(this, this.mainMenu);
+
+        Logare.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                char[] input = Password.getPassword();
+                if(input.toString().equals("Admin"));
+                {
+
+                }
+            }
+        });
 
     }
 
