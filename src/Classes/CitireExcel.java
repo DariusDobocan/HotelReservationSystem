@@ -39,6 +39,31 @@ public class CitireExcel {
         return value;               //returns the cell value
     }
 
+    public int ReadCellDataInt(int vRow, int vColumn, String xlsx)
+    {
+        int value;
+        Workbook wb=null;
+        try
+        {
+            FileInputStream fis=new FileInputStream(xlsx);
+
+            wb=new XSSFWorkbook(fis);
+        }
+        catch(FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        catch(IOException e1)
+        {
+            e1.printStackTrace();
+        }
+        Sheet sheet=wb.getSheetAt(0);
+        Row row=sheet.getRow(vRow);
+        Cell cell=row.getCell(vColumn);
+        value= (int) cell.getNumericCellValue();
+        return value;
+    }
+
 }
 
 

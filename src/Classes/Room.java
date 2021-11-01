@@ -35,7 +35,12 @@ public class Room {
                 '}';
     }
 
-    public static String fisU(){
-        return "src/User.xlsx";
+    public void evacuareUser(){
+        _idUser = "empty";
     }
+    
+    public static String fisR() {
+        return "src/Room.xlsx";
+    }
+
 }
