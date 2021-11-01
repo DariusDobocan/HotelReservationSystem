@@ -44,7 +44,8 @@ public class Room {
         _idUser = "empty";
     }
 
-    public static String fisR(){
+    public static String fisR() {
         return "src/Room.xlsx";
     }
+
 }

@@ -7,6 +7,8 @@ public class Main2 {
         Person[] _user = new User[100];
         Room[] _room = new Room[16];
         CitireExcel x = new CitireExcel();
+        Sortare y = new Sortare();
+        ScriereExcel z = new ScriereExcel();
         int nrCam, nrPat, nrPers, pret;
         String firstName, lastName, id, phoneNumber, email,idUser, idAngajat,size;
         for(int i=1;i<=3;++i) {
@@ -22,6 +24,7 @@ public class Main2 {
                 e.printStackTrace();
             }
         }
+
         for(int i=1;i<=15;++i) {
             nrCam = x.ReadCellDataInt(i, 0, Room.fisR());
             nrPat = x.ReadCellDataInt(i, 1, Room.fisR());
@@ -37,7 +40,9 @@ public class Main2 {
                 e.printStackTrace();
             }
         }
-        System.out.println(_room[7].toString());
+
+
+        z.WriteCellData(1,6,Room.fisR(),"yes");
     }
 
 }
