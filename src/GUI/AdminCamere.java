@@ -138,12 +138,14 @@ public class AdminCamere {
 
     }
 
-    public void displayadminCamere(){
+    public void displayadminCamere() {
         adminCameref.setContentPane(this.adminCamere);
-        adminCameref.setSize(1920,1080);
+        adminCameref.setSize(1920, 1080);
         adminCameref.setVisible(true);
         adminCameref.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public JPanel getAdminCamere(){return adminCamere;}
+    public JPanel getAdminCamere() {
+        return adminCamere;
+    }
 }

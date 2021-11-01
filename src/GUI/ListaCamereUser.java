@@ -2,7 +2,6 @@ package GUI;
 
 import Classes.CitireExcel;
 import Classes.Room;
-import Classes.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -29,8 +28,7 @@ public class ListaCamereUser {
             public void actionPerformed(ActionEvent e) {
 
                 String sortare = comboBox1.getActionCommand();
-                if(sortare == "Pret Crescator")
-                {
+                if (sortare == "Pret Crescator") {
 
                 }
             }
