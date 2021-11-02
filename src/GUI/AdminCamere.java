@@ -30,11 +30,12 @@ public class AdminCamere {
     public AdminCamere(MainMenu mainMenu) {
         this.adminCameref = new JFrame("Camere admin");
         this.mainMenu = mainMenu;
-        this.detaliiCameraAdmin = new DetaliiCameraAdmin(this, this.mainMenu);
+
 
         Camera1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  1);
 
             }
         });
@@ -42,13 +43,14 @@ public class AdminCamere {
         camera2Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  2);
             }
         });
 
         camera3Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  3);
 
             }
         });
@@ -56,6 +58,7 @@ public class AdminCamere {
         camera4Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  4);
 
             }
         });
@@ -63,6 +66,7 @@ public class AdminCamere {
         camera5Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  5);
 
             }
         });
@@ -70,6 +74,7 @@ public class AdminCamere {
         camera6Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  6);
 
             }
         });
@@ -77,6 +82,7 @@ public class AdminCamere {
         camera7Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  7);
 
             }
         });
@@ -84,6 +90,7 @@ public class AdminCamere {
         camera8Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  8);
 
             }
         });
@@ -91,6 +98,7 @@ public class AdminCamere {
         camera9Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  9);
 
             }
         });
@@ -98,6 +106,7 @@ public class AdminCamere {
         camera10Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  10);
 
             }
         });
@@ -105,6 +114,7 @@ public class AdminCamere {
         camera11Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  11);
 
             }
         });
@@ -112,6 +122,7 @@ public class AdminCamere {
         camera12Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  12);
 
             }
         });
@@ -119,6 +130,7 @@ public class AdminCamere {
         camera13Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  13);
 
             }
         });
@@ -126,6 +138,7 @@ public class AdminCamere {
         camera14Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  14);
 
             }
         });
@@ -133,6 +146,7 @@ public class AdminCamere {
         camera15Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  15);
 
             }
         });

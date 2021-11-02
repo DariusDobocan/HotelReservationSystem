@@ -2,7 +2,7 @@ package GUI;
 
 public class DetaliiCameraAdmin {
 
-    public DetaliiCameraAdmin(AdminCamere adminCamere, MainMenu mainMenu){
+    public DetaliiCameraAdmin(AdminCamere adminCamere,int i){
 
     }
 
