@@ -18,7 +18,7 @@ public class AdminLogin {
     public AdminLogin(MainMenu mainMenu) {
         this.AdminLoginMenu = new JFrame("AdminLogin");
         this.mainMenuf = mainMenu;
-        this.adminCamere = new AdminCamere(this, this.mainMenuf);
+        this.adminCamere = new AdminCamere(this.mainMenuf);
 
         Logare.addActionListener(new ActionListener() {
             @Override

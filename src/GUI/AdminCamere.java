@@ -25,11 +25,12 @@ public class AdminCamere {
 
     private AdminLogin adminLogin;
     private MainMenu mainMenu;
+    private DetaliiCameraAdmin detaliiCameraAdmin;
 
-    public AdminCamere(AdminLogin adminLogin, MainMenu mainMenu) {
+    public AdminCamere(MainMenu mainMenu) {
         this.adminCameref = new JFrame("Camere admin");
         this.mainMenu = mainMenu;
-        this.adminLogin = adminLogin;
+        this.detaliiCameraAdmin = new DetaliiCameraAdmin(this, this.mainMenu);
 
         Camera1.addActionListener(new ActionListener() {
             @Override

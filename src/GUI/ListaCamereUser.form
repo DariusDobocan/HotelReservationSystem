@@ -28,11 +28,7 @@
         <properties>
           <model>
             <item value="Pret crescator"/>
-            <item value="Pret descrescator"/>
-            <item value="Numar persoane crescator"/>
-            <item value="Numar persoane descrescatoare"/>
-            <item value="Suprafata crescatoare"/>
-            <item value="Suprafata descrescatoare"/>
+            <item value="Numar paturi crescator"/>
           </model>
         </properties>
       </component>

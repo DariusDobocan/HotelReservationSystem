@@ -1,6 +1,6 @@
 package GUI;
 
-import Classes.Person;
+import Classes.CitireExcel;
 import Classes.User;
 
 import javax.swing.*;
@@ -19,10 +19,10 @@ public class UserLogin {
     private ListaCamereUser listaCamereUser;
 
     public UserLogin(MainMenu mainMenu) {
-        Person[] _user = new User[50];
         this.UserMenu = new JFrame("User Login");
         this.mainMenu = mainMenu;
         this.listaCamereUser = new ListaCamereUser(this.mainMenu);
+        CitireExcel x = new CitireExcel();
 
         Logare.addActionListener(new ActionListener() {
             @Override
@@ -30,9 +30,14 @@ public class UserLogin {
                 String text = Name.getText();
                 String s = new String(PasswordUser.getPassword());
                 s.valueOf(PasswordUser.getPassword());
+                String name, id;
                 for (int i = 1; i <= 15; ++i) {
-                    if (text.equals(_user[i].get_firstName()) && s.equals(_user[i].get_id())) {
+                    name = String.valueOf(x.ReadCellData(i, 0, User.fisU()));
+                    id = String.valueOf(x.ReadCellData(i, 4, User.fisU()));
 
+                    if (text.equals(name) && s.equals(id)) {
+                        listaCamereUser.displayCamereOferteFrame();
+                        UserMenu.setVisible(false);
                     }
                 }
             }
@@ -51,6 +56,8 @@ public class UserLogin {
         UserMenu.setContentPane(this.SecondPanel);
         UserMenu.setSize(1920, 1080);
         UserMenu.setVisible(true);
+        UserMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
 
     public JPanel getMainPanel() {

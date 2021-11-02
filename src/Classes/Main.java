@@ -1,8 +1,19 @@
 package Classes;
 
-public class Main2 {
+import GUI.MainMenu;
+
+public class Main {
+
+    private MainMenu mainMenu;
+
+    public Main() {
+        this.mainMenu = new MainMenu();
+    }
 
     public static void main(String[] args) {
+
+        Main GUI = new Main();
+        GUI.mainMenu.displayMainMenu();
 
         Person[] _user = new User[100];
         Room[] _room = new Room[16];
@@ -10,8 +21,8 @@ public class Main2 {
         Sortare y = new Sortare();
         ScriereExcel z = new ScriereExcel();
         int nrCam, nrPat, nrPers, pret;
-        String firstName, lastName, id, phoneNumber, email,idUser, idAngajat,size;
-        for(int i=1;i<=3;++i) {
+        String firstName, lastName, id, phoneNumber, email, idUser, idAngajat, size;
+        for (int i = 1; i <= 3; ++i) {
             firstName = x.ReadCellData(i, 1, User.fisU());
             lastName = x.ReadCellData(i, 0, User.fisU());
             phoneNumber = x.ReadCellData(i, 3, User.fisU());
@@ -19,13 +30,12 @@ public class Main2 {
             id = x.ReadCellData(i, 4, User.fisU());
             try {
                 _user[i] = new User(firstName, lastName, id, phoneNumber, email);
-            }
-            catch(InvalidPhoneNumberException e){
+            } catch (InvalidPhoneNumberException e) {
                 e.printStackTrace();
             }
         }
 
-        for(int i=1;i<=15;++i) {
+        for (int i = 1; i <= 15; ++i) {
             nrCam = x.ReadCellDataInt(i, 0, Room.fisR());
             nrPat = x.ReadCellDataInt(i, 1, Room.fisR());
             nrPers = x.ReadCellDataInt(i, 2, Room.fisR());
@@ -35,14 +45,13 @@ public class Main2 {
             idUser = x.ReadCellData(i, 6, Room.fisR());
             try {
                 _room[i] = new Room(nrCam, nrPat, nrPers, pret, size, idUser, idAngajat);
-            }
-            catch(InvalidPriceException e){
+            } catch (InvalidPriceException e) {
                 e.printStackTrace();
             }
         }
 
 
-        z.WriteCellData(1,6,Room.fisR(),"yes");
+        z.WriteCellData(1, 6, Room.fisR(), "yes");
     }
 
 }
