@@ -37,12 +37,11 @@ public class UserLogin {
                     id = String.valueOf(x.ReadCellData(i, 4, User.fisU()));
 
                     if (text.equals(name) && s.equals(id) && text != "Empty") {
-                            
+
                         listaCamereUser.displayCamereOferteFrame();
                         UserMenu.setVisible(false);
                     }
                 }
-                JOptionPane.showMessageDialog(null, "Ati introdus datele gresit");
             }
         });
 
