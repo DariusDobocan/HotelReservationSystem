@@ -1,8 +1,19 @@
 package Classes;
 
+import GUI.MainMenu;
+
 public class Main {
 
+    private MainMenu mainMenu;
+
+    public Main(){
+        this.mainMenu = new MainMenu();
+    }
+
     public static void main(String[] args) {
+
+        Main program = new Main();
+        program.mainMenu.displayMainMenu();
 
         Person[] _user = new User[100];
         Room[] _room = new Room[16];
