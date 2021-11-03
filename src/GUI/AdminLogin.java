@@ -46,7 +46,7 @@ public class AdminLogin {
 
     public void displayAdminLogin() {
         AdminLoginMenu.setContentPane(this.adminLogin);
-        AdminLoginMenu.setSize(1920, 1080);
+        AdminLoginMenu.setSize(500, 300);
         AdminLoginMenu.setVisible(true);
         AdminLoginMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

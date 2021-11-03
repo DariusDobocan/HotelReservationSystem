@@ -35,7 +35,7 @@ public class UserLogin {
                     name = String.valueOf(x.ReadCellData(i, 0, User.fisU()));
                     id = String.valueOf(x.ReadCellData(i, 4, User.fisU()));
 
-                    if (text.equals(name) && s.equals(id)) {
+                    if (text.equals(name) && s.equals(id) && text!="Empty") {
                         listaCamereUser.displayCamereOferteFrame();
                         UserMenu.setVisible(false);
                     }
@@ -54,7 +54,7 @@ public class UserLogin {
 
     public void displayUserMenu() {
         UserMenu.setContentPane(this.SecondPanel);
-        UserMenu.setSize(1920, 1080);
+        UserMenu.setSize(500, 300);
         UserMenu.setVisible(true);
         UserMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
