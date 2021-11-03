@@ -1,6 +1,8 @@
 package GUI;
 
-import Classes.*;
+import Classes.CitireExcel;
+import Classes.ScriereExcel;
+import Classes.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,20 +19,28 @@ public class DetaliiCameraAdmin {
     private AdminCamere adminCamere;
 
     public DetaliiCameraAdmin(AdminCamere adminCamere, int i) {
-        this.mypannelF=new JFrame("Camera utilizata");
+        this.mypannelF = new JFrame("Camera utilizata");
         this.adminCamere = adminCamere;
         CitireExcel x = new CitireExcel();
         ScriereExcel w = new ScriereExcel();
-
         String firstName, lastName, id, phoneNumber, email;
         firstName = x.ReadCellData(i, 1, User.fisU());
         lastName = x.ReadCellData(i, 0, User.fisU());
         phoneNumber = x.ReadCellData(i, 3, User.fisU());
         email = x.ReadCellData(i, 2, User.fisU());
         id = x.ReadCellData(i, 4, User.fisU());
+        int verificare = 1;
+        if (firstName.equals("Empty")) {
+            verificare = 0;
+        }
 
-        label1.setText(firstName + " " + lastName);
-        label2.setText(firstName + " " + lastName + " " + phoneNumber + " " + email + " " + id);
+        if (verificare == 1) {
+            label1.setText(firstName + " " + lastName);
+            label2.setText(firstName + " " + lastName + " " + phoneNumber + " " + email + " " + id);
+        } else {
+            label1.setText(" ");
+            label2.setText(" ");
+        }
         eliberatiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -55,7 +55,7 @@ public class ListaCamereUser {
                 for (int i = 1; i <= 15; ++i) {
                     for (int j = i + 1; j < 15; ++j) {
                         int auxC, aux;
-                        if (V_P.elementAt(i) > V_P.elementAt(j)) {
+                        if (V_P.elementAt(i) >= V_P.elementAt(j)) {
                             aux = V_P.elementAt(i);
                             auxC = Oferte.elementAt(i);
                             int v2, v2c;
@@ -78,7 +78,7 @@ public class ListaCamereUser {
                 for (int i = 1; i <= 15; ++i) {
                     for (int j = i + 1; j < 15; ++j) {
                         int aux, auxC;
-                        if (V_Pc.elementAt(i) > V_Pc.elementAt(j)) {
+                        if (V_Pc.elementAt(i) >= V_Pc.elementAt(j)) {
                             aux = V_Pc.elementAt(i);
                             auxC = Oferte.elementAt(i);
                             int v2, v2c;
@@ -98,7 +98,7 @@ public class ListaCamereUser {
 
     public void displayCamereOferteFrame() {
         CamereOferteFrame.setContentPane(this.CamereOferte);
-        CamereOferteFrame.setSize(1920, 1080);
+        CamereOferteFrame.setSize(700, 500);
         CamereOferteFrame.setVisible(true);
         CamereOferteFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
