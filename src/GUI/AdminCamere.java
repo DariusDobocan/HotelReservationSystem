@@ -36,6 +36,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  1);
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
 
             }
         });
@@ -44,6 +46,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  2);
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -51,7 +55,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  3);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -59,15 +64,16 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  4);
-
-            }
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);            }
         });
 
         camera5Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  5);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -75,7 +81,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  6);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -83,7 +90,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  7);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -91,7 +99,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  8);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -99,23 +108,24 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  9);
-
-            }
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);            }
         });
 
         camera10Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  10);
-
-            }
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);            }
         });
 
         camera11Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  11);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -123,7 +133,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  12);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -131,7 +142,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  13);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -139,7 +151,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  14);
-
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);
             }
         });
 
@@ -147,8 +160,8 @@ public class AdminCamere {
             @Override
             public void actionPerformed(ActionEvent e) {
                 detaliiCameraAdmin = new DetaliiCameraAdmin(AdminCamere.this,  15);
-
-            }
+                detaliiCameraAdmin.displaycameradetaliadmin();
+                adminCameref.setVisible(false);            }
         });
 
     }

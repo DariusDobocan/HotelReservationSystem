@@ -46,6 +46,8 @@ public class ListaCamereUser {
 
         String[] text = {"as", "adsa"};
 
+        list1.setListData(Oferte);
+
         sortatiDupaPretButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
