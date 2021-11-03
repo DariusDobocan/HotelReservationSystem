@@ -28,6 +28,12 @@ public class ListaCamereUser {
         Vector<Integer> V_P = new Vector<>();
         Vector<Integer> V_Pc = new Vector<>();
         Vector<Integer> Oferte = new Vector<>();
+        Vector<Integer> Ofertes = new Vector<>();
+        Vector<Integer> Ofertep = new Vector<>();
+        Ofertep.setSize(50);
+        Ofertes.setSize(50);
+        Oferte.setSize(50);
+        V_P.setSize(50);
 
         int v[];
 
@@ -38,60 +44,84 @@ public class ListaCamereUser {
             String Empty = x.ReadCellData(i, 6, Room.fisR());
             if (Empty.equals("Empty")) {
                 Oferte.add(x.ReadCellDataInt(i, 0, Room.fisR()));
-                V_P.add(x.ReadCellDataInt(i, 4, Room.fisR()));
-                V_Pc.add(x.ReadCellDataInt(i, 2, Room.fisR()));
+                int j = x.ReadCellDataInt(i, 0, Room.fisR());
+                V_P.add(j);
                 ++t;
             }
         }
 
+
+        for (int i = 1; i <= t; ++i) {
+            if (V_P.elementAt(i) != null) {
+                Ofertep.add(i, x.ReadCellDataInt(V_P.elementAt(i), 4, Room.fisR()));
+                if (i != 1) {
+                    if (Ofertep.elementAt(i - 1) < Ofertep.elementAt(i)) {
+                        int aux, aux2;
+                        aux = Ofertep.elementAt(i - 1);
+                        aux2 = Ofertep.elementAt(i);
+                        Ofertep.set(i - 1, aux2);
+                        Ofertep.set(i, aux);
+
+                    }
+                }
+            }
+        }
         String[] text = {"as", "adsa"};
 
+
         list1.setListData(Oferte);
+        final int z = t;
 
         sortatiDupaPretButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                list1.setListData(Oferte);
-                for (int i = 1; i <= 15; ++i) {
-                    for (int j = i + 1; j < 15; ++j) {
-                        int auxC, aux;
-                        if (V_P.elementAt(i) >= V_P.elementAt(j)) {
-                            aux = V_P.elementAt(i);
-                            auxC = Oferte.elementAt(i);
-                            int v2, v2c;
-                            v2 = V_P.elementAt(j);
-                            v2c = Oferte.elementAt(j);
-                            V_P.set(i, v2);
-                            Oferte.set(i, v2c);
-                            V_P.set(j, aux);
-                            Oferte.set(j, auxC);
+                int ey = 0;
+                for (int i = 1; i <= z; ++i) {
+                    if (V_P.elementAt(i) != null) {
+                        Ofertep.add(i, x.ReadCellDataInt(V_P.elementAt(i), 4, Room.fisR()));
+                        if (i != 1) {
+                            if (Ofertep.elementAt(i - 1) < Ofertep.elementAt(i)) {
+                                int aux, aux2;
+                                aux = Ofertep.elementAt(i - 1);
+                                aux2 = Oferte.elementAt(i);
+                                Oferte.set(i - 1, aux2);
+                                Ofertep.set(i, aux);
+
+                            }
                         }
                     }
+                    ey++;
                 }
-                list1.setListData(Oferte);
+                if (ey == z) {
+                    JList list2 = new JList(Ofertep);
+                    list2.setListData(Ofertep);
+                    list1 = list2;
+
+                }
             }
         });
 
         sortatiDupaNuPersoaneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i = 1; i <= 15; ++i) {
-                    for (int j = i + 1; j < 15; ++j) {
-                        int aux, auxC;
-                        if (V_Pc.elementAt(i) >= V_Pc.elementAt(j)) {
-                            aux = V_Pc.elementAt(i);
-                            auxC = Oferte.elementAt(i);
-                            int v2, v2c;
-                            v2 = V_Pc.elementAt(j);
-                            v2c = Oferte.elementAt(j);
-                            V_Pc.set(i, v2);
-                            Oferte.set(i, v2c);
-                            V_Pc.set(j, aux);
-                            Oferte.set(j, auxC);
+                for (int i = 1; i <= z; ++i) {
+                    if (V_P.elementAt(i) != null) {
+                        int y = V_P.elementAt(i);
+
+                        Ofertes.add(i, x.ReadCellDataInt(y, 2, Room.fisR()));
+                        if (i != 1) {
+                            if (Ofertes.elementAt(i - 1) < Ofertes.elementAt(i)) {
+                                int aux, aux2;
+                                aux = Ofertes.elementAt(i - 1);
+                                aux2 = Ofertes.elementAt(i);
+                                Ofertes.set(i - 1, aux2);
+                                Ofertes.set(i, aux);
+
+                            }
                         }
                     }
+                    list1 = new JList(Ofertes);
                 }
-                list1.setListData(Oferte);
             }
         });
     }
