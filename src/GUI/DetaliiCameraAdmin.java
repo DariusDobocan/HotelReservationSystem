@@ -14,6 +14,7 @@ public class DetaliiCameraAdmin {
     private JPanel MyPanel;
     private JLabel label1;
     private JLabel label2;
+    private JButton Back;
     private JFrame mypannelF;
 
     private AdminCamere adminCamere;
@@ -52,6 +53,14 @@ public class DetaliiCameraAdmin {
 
             }
 
+        });
+
+        Back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adminCamere.displayadminCamere();
+                mypannelF.setVisible(false);
+            }
         });
     }
 

@@ -31,15 +31,18 @@ public class UserLogin {
                 String s = new String(PasswordUser.getPassword());
                 s.valueOf(PasswordUser.getPassword());
                 String name, id;
+
                 for (int i = 1; i <= 15; ++i) {
                     name = String.valueOf(x.ReadCellData(i, 0, User.fisU()));
                     id = String.valueOf(x.ReadCellData(i, 4, User.fisU()));
 
-                    if (text.equals(name) && s.equals(id) && text!="Empty") {
+                    if (text.equals(name) && s.equals(id) && text != "Empty") {
+                            
                         listaCamereUser.displayCamereOferteFrame();
                         UserMenu.setVisible(false);
                     }
                 }
+                JOptionPane.showMessageDialog(null, "Ati introdus datele gresit");
             }
         });
 
